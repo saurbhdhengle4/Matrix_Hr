@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:web_dashboard_matrix/common/app_colors.dart';
 import 'package:web_dashboard_matrix/common/app_responsive.dart';
-import 'package:web_dashboard_matrix/controllers/menu_controller.dart';
+import 'package:web_dashboard_matrix/controllers/menu_controller.dart' as a;
 
 class HeaderWidget extends StatefulWidget {
   const HeaderWidget({Key? key}) : super(key: key);
@@ -25,7 +25,7 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                 Icons.menu,
                 color: AppColor.black,
               ),
-              onPressed: Provider.of<MenuController>(context, listen: false)
+              onPressed: Provider.of<a.MenuController>(context, listen: false)
                   .controlMenu,
             ),
           //responsive end

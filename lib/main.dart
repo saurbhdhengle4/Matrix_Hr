@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'package:web_dashboard_matrix/controllers/menu_controller.dart';
+import 'package:web_dashboard_matrix/controllers/menu_controller.dart' as a;
 import 'package:web_dashboard_matrix/pages/home_page.dart';
 
 void main() {
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       ),
       home: MultiProvider(
         providers: [
-          ChangeNotifierProvider(create: (context) => MenuController()),
+          ChangeNotifierProvider(create: (context) => a.MenuController()),
         ],
         child: const HomePage(),
       ),
